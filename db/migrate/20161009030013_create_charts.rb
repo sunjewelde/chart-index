@@ -1,8 +1,7 @@
 class CreateCharts < ActiveRecord::Migration
   def change
     create_table :charts do |t|
-      t.string :currency_id
-      t.string :intger
+      t.integer :currency_id
       t.date :date
       t.decimal :start_price
       t.decimal :high_price

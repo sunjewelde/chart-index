@@ -14,8 +14,7 @@
 ActiveRecord::Schema.define(version: 20161009030013) do
 
   create_table "charts", force: :cascade do |t|
-    t.string   "currency_id"
-    t.string   "intger"
+    t.integer  "currency_id"
     t.date     "date"
     t.decimal  "start_price"
     t.decimal  "high_price"

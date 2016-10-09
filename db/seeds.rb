@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require "csv"
+CSV.foreach('db/usd.csv') do |row|
+
+   Chart.create(:currency_id => row[0], :date => row[1], :start_price => row[2], :high_price => row[3], :low_price => row[4], :end_price => row[5])
+
+ 
+end
